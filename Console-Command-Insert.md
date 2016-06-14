@@ -35,5 +35,13 @@ INSERT INTO <<class-name>|CLUSTER:<cluster-name>> (<field-names>) VALUES ( <fiel
   <pre>
   orientdb> <code class='lang-sql userinput'>INSERT INTO Profile (name, friends) VALUES ('Luca', [10:3, 10:4])</code>
   </pre>
+  
+- Insert a new record, adding an embedded data:
+
+  <pre>
+  orientdb> <code class='lang-sql userinput'>INSERT INTO Profile (name, friend) VALUES ("Luca",{"@type":"d", "@class": "V","name" : "Luigi"})</code>
+  </pre>
+  
+  
 
 >For more information on other commands, see [SQL](SQL.md) and [Console](Console-Commands.md) commands.
