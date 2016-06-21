@@ -94,6 +94,14 @@ gremlin> e = g.addEdge(v1, v2, 'friend');
 ==>e[#6:0][#5:0-friend->#5:1]
 ```
 
+# Create an index
+
+This example creates an index on the class Vertex and on the subclasses of class Vertex.
+
+```java
+gremlin> g.createKeyIndex("surname", Vertex.class)
+```
+
 # Save changes
 OrientDB assigns a temporary identifier to each vertex and edge that is created. To save them to the database stopTransaction(SUCCESS) should be called
 ```groovy
